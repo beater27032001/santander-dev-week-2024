@@ -6,6 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.0</version>
+
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>me.dio</groupId>
@@ -56,6 +57,18 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version> <!-- Versão atualizada do plugin -->
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>me.dio.SantanderDevWeek2024Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -28,10 +28,10 @@ public class UserServiceImpl implements UserService {
         if (userToCreate.getId() != null && userRepository.existsById(userToCreate.getId())){
             throw new IllegalArgumentException("This User ID already exists.");
         }
-        if (userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber()) &&
-                userRepository.existsByAccountAgency(userToCreate.getAccount().getAgency())){
-            throw new IllegalArgumentException("This Account already exists");
-        }
+//        if (userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber()) &&
+//                userRepository.existsByAccountAgency(userToCreate.getAccount().getAgency())){
+//            throw new IllegalArgumentException("This Account already exists");
+//        }
         return userRepository.save(userToCreate);
     }
 }
