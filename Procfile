@@ -1,1 +1,1 @@
-web: java -jartarget/santander-dev-week-2024-0.0.1-SNAPSHOT.jar
+web: java target/santander-dev-week-2024-0.0.1-SNAPSHOT.jar
